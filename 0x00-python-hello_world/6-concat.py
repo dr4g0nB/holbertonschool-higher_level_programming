@@ -1,5 +1,5 @@
 #!/usr/bin/python3
 str1 = "Holberton"
 str2 = "School"
-strtotal = (str1 + " " +str2)
-print("Welcome to {}!".format(strtotal))
+space = " "
+print("Welcome to {}!".format(str1+space+str2))
