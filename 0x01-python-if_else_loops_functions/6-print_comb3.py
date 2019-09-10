@@ -5,6 +5,6 @@ while numb < 8:
     while num1 <= 9:
         if numb != num1:
             print('{:d}{:d}'.format(numb, num1), end=", ")
-            num1 += 1
+        num1 += 1
     numb += 1
 print('{:d}{:d}'.format(numb, num1 - 1), sep="")
