@@ -7,7 +7,7 @@ if __name__ == "__main__":
     if argc == 1:
         print('{:d} arguments.'.format(argc - 1))
     elif argc == 2:
-        print('{:d} argument'.format(argc - 1))
+        print('{:d} argument:'.format(argc - 1))
         print('1: {}'.format(sys.argv[1]))
     else:
         print('{:d} arguments:'.format(argc - 1))
