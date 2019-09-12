@@ -5,7 +5,7 @@ if __name__ == "__main__":
     argc = len(sys.argv)
 
     if argc == 1:
-        print('{:d} arguments'.format(argc - 1))
+        print('{:d} arguments.'.format(argc - 1))
     elif argc == 2:
         print('{:d} argument'.format(argc - 1))
         print('1: {}'.format(sys.argv[1]))
