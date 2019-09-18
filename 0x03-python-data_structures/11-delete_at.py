@@ -9,4 +9,4 @@ def delete_at(my_list=[], idx=0):
     else:
         del my_list[idx]
 #        n_list += tra
-    return(my_list)
+        return(my_list)
