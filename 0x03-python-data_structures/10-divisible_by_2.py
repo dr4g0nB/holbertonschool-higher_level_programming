@@ -4,4 +4,4 @@ def divisible_by_2(my_list=[]):
     if my_list is None:
         return(None)
 
-    n_list 
+    n_list
