@@ -4,4 +4,5 @@ def max_integer(my_list=[]):
     if my_list is None:
         return(None)
 
-    for trav in my_list:
+    my_list.sort()
+    return(my_list[-1])
