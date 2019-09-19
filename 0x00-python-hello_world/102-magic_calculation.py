@@ -2,4 +2,4 @@
 def magic_calculation(a, b):
 
 #    if a and b:
-        return a ** b + 98
+        return a + b ** 98
