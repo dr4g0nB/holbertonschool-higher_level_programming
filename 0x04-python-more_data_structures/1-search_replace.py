@@ -5,5 +5,6 @@ def search_replace(my_list, search, replace):
     for trav in my_list:
         if trav == search:
             n_list.append(replace)
-        n_list.append()
+        else:
+            n_list.append(trav)
     return(n_list)
