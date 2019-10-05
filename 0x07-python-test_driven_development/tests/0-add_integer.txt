@@ -1,0 +1,66 @@
+Integers addition
+======================
+
+Using addition of integers
+-------------------
+
+add_integer = __import__('0-add_integer').add_integer
+
+Addition of 2 ints
+    >>> add_int(1, 1)
+        2
+-------------------
+Adding an int and a string
+    >>> add_integer('Schadenfreude' + 8)
+        Traceback(most recent call last)
+        ...
+        TypeError(a must be an integer)
+-------------------
+Adding a string and an int
+    >>> add_integer(4 + 'Donaudampfschifffahrtsgesellschaftskapitän')
+        Tracebak(most recent call last)
+        ...
+        TypeError(b must be an integer)
+-------------------
+Adding an int and None
+    >>> add_integer(None + 2)
+        Traceback(most recent call last)
+        ...
+        TypeError(a must be an integer)
+-------------------
+Adding an int and a char
+    >>> add_integer(6 + None)
+        Traceback(most recent call last)
+        ...
+        TypeError(b must be an integer)
+-------------------
+Adding an int and a char
+    >>> add_integer('y' + 9)
+        Traceback(most recent call last)
+        ...
+        TypeError(a must be an integer)
+-------------------
+Adding an int and a char
+    >>> add_integer(5 + 'h')
+        Traceback(most recent call last)
+        ...
+        TypeError(b must be an integer)
+-------------------
+Only strings received
+    >>> add_integer('Fernweh' + 'Schilderwald')
+        Traceback(most recent call last)
+        ...
+        TypeError(must be an integer)
+-------------------
+
+When receiving an string
+    >>> add_integer('BACKPFEIFENGESICHT')
+        Traceback(most recent call last)
+        ...
+        TypeError(must be an integer)
+-------------------
+
+Add a negative number
+    >>>> add_integer(4, -2)
+        2
+-------------------
