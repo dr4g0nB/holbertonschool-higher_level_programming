@@ -46,8 +46,8 @@ class Rectangle:
     def area(self):
         """ Returns the rectangle area """
         return self.__width * self.__height
-        print('#')
-        print(str('#'))
+#        print('#')
+#        print(str('#'))
 
     def __str__(self):
         """ Prints the rectangle """
