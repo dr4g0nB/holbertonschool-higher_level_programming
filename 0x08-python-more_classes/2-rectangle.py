@@ -1,10 +1,10 @@
-#!usr/bin/python3
+#!/usr/bin/python3
 class Rectangle:
     """ A rectangle """
     def __init__(self, width=0, height=0):
         """ Initialization of attributes """
-        self.width = width
-        self.height = height
+        self.__width = width
+        self.__height = height
 
     @property
     def width(self):
@@ -18,7 +18,6 @@ class Rectangle:
             raise TypeError("width must be an integer")
         if value < 0:
             raise ValueError("width must be >= 0")
-
         self.__width = value
 
     @property
@@ -33,7 +32,6 @@ class Rectangle:
             raise TypeError("height must be an integer")
         if value < 0:
             raise ValueError("height must be >= 0")
-
         self.__height = value
 
     def perimeter(self):
@@ -41,8 +39,8 @@ class Rectangle:
         if self.width == 0 & self.height == 0:
             self.perimeter = 0
         else:
-            return (self.__height + self.__width) * 2
+            return (self.height + self.width) * 2
 
     def area(self):
         """ Returns the rectangle area """
-        return self.__width * self.__height
+        return self.width * self.height
