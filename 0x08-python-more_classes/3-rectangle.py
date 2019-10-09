@@ -49,15 +49,12 @@ class Rectangle:
     def area(self):
         """ Returns the rectangle area """
         return self.width * self.height
-#        print('#')
-#        print(str('#'))
 
     def __str__(self):
         """ Prints the rectangle """
         str_rect = ''
-        i = 0
         for i in range(self.__height):
-            if i == self.height - 1:
+            if i == self.__height - 1:
                 str_rect += str(self.__width * '#')
             else:
                 str_rect += str(self.__width * '#') + '\n'
