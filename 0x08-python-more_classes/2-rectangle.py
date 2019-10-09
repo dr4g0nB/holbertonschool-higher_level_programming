@@ -1,7 +1,8 @@
 #!usr/bin/python3
 class Rectangle:
+    """ A rectangle """
     def __init__(self, width=0, height=0):
-        """  """
+        """ Initialization of attributes """
         self.width = width
         self.height = height
 
