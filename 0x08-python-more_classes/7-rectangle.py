@@ -1,4 +1,9 @@
-#!usr/bin/python3
+#!/usr/bin/python3
+"""
+    module `rectangle`
+"""
+
+
 class Rectangle:
     """ Creates a Rectangle """
     number_of_instances = 0
@@ -22,7 +27,6 @@ class Rectangle:
             raise TypeError("width must be an integer")
         if value < 0:
             raise ValueError("width must be >= 0")
-
         self.__width = value
 
     @property
@@ -41,7 +45,6 @@ class Rectangle:
             raise TypeError("height must be an integer")
         if value < 0:
             raise ValueError("height must be >= 0")
-
         self.__height = value
 
     def perimeter(self):
@@ -55,14 +58,13 @@ class Rectangle:
     def area(self):
         """ Returns the rectangle area """
         return self.__width * self.__height
-#        print('#')
-#        print(str('#'))
 
     def __str__(self):
         """ Prints the rectangle """
+        if self.width == 0 or self.height == 0:
+            return ''
 
         str_rect = ''
-        i = 0
         for i in range(self.__height):
             if i == self.height - 1:
                 str_rect += str(self.__width * self.print_symbol)
