@@ -52,6 +52,9 @@ class Rectangle:
 
     def __str__(self):
         """ Prints the rectangle """
+        if self.width == 0 or self.height == 0:
+            return ''
+
         str_rect = ''
         for i in range(self.__height):
             if i == self.__height - 1:
