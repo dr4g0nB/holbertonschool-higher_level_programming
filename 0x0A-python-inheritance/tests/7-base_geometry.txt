@@ -5,6 +5,6 @@ Class BaseGeometry
 -------------------
 
     >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
-    >>> bg.integer_validator("name", "John")
-    >>> bg.integer_validator("age", 0)
-    >>> bg.integer_validator("distance", -4)
+    >>> bg.integer_validator("name", 8)
+    >>> bg.integer_validator("age", Hi)
+    >>> bg.integer_validator("distance", no_distance)
