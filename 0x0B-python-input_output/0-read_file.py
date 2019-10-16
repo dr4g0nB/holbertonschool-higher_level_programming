@@ -4,4 +4,4 @@ def read_file(filename=""):
 
     with open(filename, encoding='utf-8') as op_r:
         re = op_r.read()
-        print(re, end="")
+        print('{:s}'.format(re), end="")
