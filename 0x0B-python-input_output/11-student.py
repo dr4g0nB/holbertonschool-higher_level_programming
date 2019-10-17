@@ -3,6 +3,7 @@
 
 class Student:
     """class Student """
+
     def __init__(self, first_name, last_name, age):
         """ Init of attr """
         self.first_name = first_name
@@ -11,4 +12,4 @@ class Student:
 
     def to_json(self):
         """ Retrieves a dict representaion """
-        return Student.__dir__
+        return self.__dict__
