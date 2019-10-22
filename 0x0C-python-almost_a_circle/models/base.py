@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """ Class Base """
 import json
-import os
 
 
 class Base:
@@ -10,7 +9,6 @@ class Base:
 
     def __init__(self, id=None):
         """self.id = id"""
-
         if id is not None:
             self.id = id
         else:
@@ -34,7 +32,7 @@ class Base:
 
         for trav in list_objs:
             e_list.append(trav.to_dictionary())
-            e_str = cls.to_json_string(e_list)
+        e_str = cls.to_json_string(e_list)
 
         with open(filename, encoding="utf-8", mode="w") as wr:
             wr.write(e_str)
@@ -51,10 +49,10 @@ class Base:
     def create(cls, **dictionary):
         """ Returns an instance with all attributes already set """
         if cls.__name__ == "Square":
-            ins = cls(1)
+            ins = cls(1, 0, 0)
 
         if cls.__name__ == "Rectangle":
-            ins = cls(1, 1)
+            ins = cls(1, 1, 0, 0)
 
         ins.update(**dictionary)
         return ins
