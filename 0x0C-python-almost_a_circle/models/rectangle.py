@@ -115,7 +115,7 @@ class Rectangle(Base):
     def __str__(self):
         """ dunder method """
         return ('[Rectangle] ({}) {}/{}- {}/{}'.format(self.id,
-                self.__x, self.__y, self.__width, self.__height))
+                self.x, self.y, self.width, self.height))
 
     def to_dictionary(self):
         """ Returns the dictionary representation of Rectangle """
