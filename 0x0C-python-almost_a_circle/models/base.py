@@ -31,7 +31,7 @@ class Base:
 
         with open(filename, encoding="utf-8", mode="w") as wr:
             if list_objs is None:
-                wr.write(cls.json_string([]))
+                wr.write(cls.to_json_string([]))
             else:
                 for content in list_objs:
                     e_list.append(content.to_dictionary())
