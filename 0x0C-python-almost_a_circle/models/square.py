@@ -1,7 +1,7 @@
 #!/usr/bin/python3
+""" Inherits from Rectangle """
 from models.base import Base
 from models.rectangle import Rectangle
-""" Inherits from Rectangle """
 
 
 class Square(Rectangle):
