@@ -77,6 +77,7 @@ class Rectangle(Base):
 
     def update(self, *args, **kwargs):
         """ Assigns an argument to each attribute """
+        """ kwargs """
         for k_key, v_value in kwargs.items():
             if k_key == "id":
                 self.id = v_value
@@ -89,6 +90,7 @@ class Rectangle(Base):
             if k_key == "y":
                 self.__y = v_value
 
+        """ args """
         for possi, trav_args in enumerate(args):
             if possi == 0:
                 self.id = trav_args
@@ -105,3 +107,8 @@ class Rectangle(Base):
         """ dunder method """
         return ('[Rectangle] ({}) {}/{}- {}/{}'.format(self.id,
                 self.__x, self.__y, self.__width, self.__height))
+
+    def to_dictionary(self):
+        """ Returns the dictionary representation of Rectangle """
+        rect_dict = {'id': self.id , 'width':self.__width , 'height':self.__height , 'x':self.__x , 'y':self.__y}
+        return rect_dict
