@@ -1,7 +1,7 @@
 #!/usr/bin/python3
+""" Class Base """
 import json
 import os
-""" Class Base """
 
 
 class Base:
@@ -17,7 +17,7 @@ class Base:
             self.id = id
         else:
             """self.id = self.__nb_object"""
-            #self.id = id
+            """self.id = id"""
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
 
@@ -62,11 +62,12 @@ class Base:
 
         ins.update(**dictionary)
         return ins
-    @classmethod
-    def load_from_file(cls):
+
+    """@classmethod
+    def load_from_file(cls):"""
         """ Returns a list of instances """
-        filename = cls.__name__ + ".json"
+        """filename = cls.__name__ + ".json"
         if os.path.exits(filename):
-            return 
+            return
         else:
-            return []
+            return []"""
