@@ -27,15 +27,16 @@ class Base:
     def save_to_file(cls, list_objs):
         """ Writes the JSON representation of list_objs to a file """
         filename = cls.__name__ + ".json"
-        e_str = " "
-        e_list = []
-
-        for trav in list_objs:
-            e_list.append(trav.to_dictionary())
-        e_str = cls.to_json_string(e_list)
 
         with open(filename, encoding="utf-8", mode="w") as wr:
-            wr.write(e_str)
+            e_list = []
+            if list_objs is None:
+                wr.write(cls.json_string([]))
+            else:
+                for content in list_objs:
+                    e_list.append(content.to_dictionary())
+                json_list = cls.to_json_string(e_list)
+                wr.write(json_list)
 
     @staticmethod
     def from_json_string(json_string):
@@ -57,11 +58,18 @@ class Base:
         ins.update(**dictionary)
         return ins
 
-    """@classmethod
-    def load_from_file(cls):"""
-    """ Returns a list of instances """
-    """filename = cls.__name__ + ".json"
-        if os.path.exits(filename):
-            return
-        else:
-            return []"""
+    @classmethod
+    def load_from_file(cls):
+        """ Returns a list of instances """
+        json_file = cls.__name__ + ".json"
+
+        try:
+            with open(json_file) as op:
+                inside = op.read()
+                json_data = cls.from_json_string(inside)
+
+                e_list = []
+
+                return [cls.create(**data) for data in json_data]
+        except FileNotFoundError:
+            return []
