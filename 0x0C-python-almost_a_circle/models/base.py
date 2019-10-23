@@ -86,8 +86,8 @@ class Base:
             else:
                 for content in list_objs:
                     e_list.append(content.to_dictionary())
-                    json_list = cls.to_json_string(e_list)
-                    wr.write(json_list)
+                json_list = cls.to_json_string(e_list)
+                wr.write(json_list)
 
     @classmethod
     def load_from_file_csv(cls):
