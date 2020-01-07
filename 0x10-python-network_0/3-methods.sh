@@ -1,3 +1,3 @@
 #!/bin/bash
 # Takes in a URL and displays all HTTP methods
-curl -sX OPTIONS *"$1"
+curl -sI "$1" | grep "Allow" | cut -d ' ' -f1 --complement
