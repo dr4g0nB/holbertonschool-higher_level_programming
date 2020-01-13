@@ -7,4 +7,5 @@ data = retrieved_data.read()
 html = data.decode("UTF-8")
 print('Body response:')
 print('\t - type: {}'.format(type(html)))
-print('\t - content:{}'.format(html))
+print('\t - content: {}'.format(html))
+
