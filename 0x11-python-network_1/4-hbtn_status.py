@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 
-from urllib import request
+import requests
 
-retrieved_data = request.urlopen("https://intranet.hbtn.io/status")
-data = retrieved_data.read()
-html = data.decode("UTF-8")
-print('Body response:')
-print('\t - type: {}'.format(type(html)))
-print('\t - content: {}'.format(html))
-
+if __name__ == "__main__":
+    retrieved_data = requests.get("https://intranet.hbtn.io/status")
+    #retrieved_data.encoding()
+    #retrieved_data.text()
+    print('Body response:')
+    print('\t- type:', type(retrieved_data.text))
+    print('\t- content:',retrieved_data.text)
