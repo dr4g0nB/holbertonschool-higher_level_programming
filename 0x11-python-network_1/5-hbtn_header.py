@@ -8,4 +8,4 @@ if __name__ == "__main__":
 
     retrieved_url = requests.get(url)
     ret_url = retrieved_url.headers
-    print(ret_url['X-Request-Id'])
+    print(ret_url.get('X-Request-Id'))
