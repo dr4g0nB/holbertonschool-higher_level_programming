@@ -5,7 +5,7 @@ const argv = process.argv[2];
 
 fs.readFile(argv, 'utf-8', function (error, data) {
   if (error) {
-    console.error(error);
+    process.stdout.write(error);
   } else {
     process.stdout.write(data);
   }
