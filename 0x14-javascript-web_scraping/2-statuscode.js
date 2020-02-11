@@ -8,6 +8,6 @@ request.get(argv, function (err, response, body) {
   if (err) {
     return console.log(err);
   } else {
-    console.log('code: ', code);
+    console.log('code:', code);
   }
 });
