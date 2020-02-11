@@ -17,15 +17,15 @@ module.exports = class Rectangle {
       }
     };
 
+    Rectangle.prototype.double = function () {
+      this.height = this.height * 2;
+      this.width = this.width * 2;
+    };
+
     Rectangle.prototype.rotate = function () {
       let swap = this.width;
       swap = this.height;
       this.height = this.width;
-    }
-
-    Rectangle.prototype.double = function () {
-      this.width = this.width * 2;
-      this.height = this.height * 2;
-    }
+    };
   }
 };
