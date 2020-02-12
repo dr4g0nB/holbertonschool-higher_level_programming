@@ -7,7 +7,15 @@ request(argv, function (err, response, body) {
   if (err) {
     return console.log(err);
   } else {
-    /** for () {} */
-    console.log(JSON.parse(body).id);
+    const data = JSON.parse(body);
+    let count = 0;
+    for (const travDict of data.results) {
+      for (const travCharac of travDict.characters) {
+        if (travCharac.search('people/18') !== -1) {
+          count++;
+        }
+      }
+    }
+    console.log(count);
   }
 });
