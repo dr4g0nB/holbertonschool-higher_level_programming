@@ -7,7 +7,7 @@ request(argv, function(err, response, body) {
   if (err) {
     return console.log(err);
   } else {
-    for () {}
+    /** for () {} */
     console.log(JSON.parse(body).id);
   }
 });
