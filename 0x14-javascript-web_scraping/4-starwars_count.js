@@ -5,8 +5,9 @@ const argv = process.argv[2];
 
 request(argv, function (err, response, body) {
   if (err) {
-    return console.log(err);
-  } else {
+    console.log(err);
+  }
+  if (response) {
     const data = JSON.parse(body);
     let count = 0;
     for (const travDict of data.results) {
